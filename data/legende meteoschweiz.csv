@@ -1,0 +1,11 @@
+tre200d0, Temperatur_Tagesmittel
+tre200dv, Tagesmittel_Temperatur_h
+tre200b0, Tagesmittel_Temperatur_10min
+tpr200dx, Tagesmaximaltemperatur
+tpr200dn, Tagesminimaltemperatur
+rre150d0, Niederschlag_Tagessumme
+rre150b0, Niederschlagssumme_10min
+sre000d0, Sonnenscheindauer_Tagessumme
+gre000d0, Globalstrahlung_Tagesmittel
+spr100h0, Luftfeuchtigkeit_Stundenmittelwert
+
