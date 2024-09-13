@@ -10,8 +10,6 @@ _The original slides can be found in [CHALLENGE.md](CHALLENGE.md)_
 
 Working in an open source data science environment, we created several [Jupyter Notebooks](https://jupyter.org) to dive into the challenge of understanding and modelling national energy balancing with Python. In our presentation you can see the key outputs, or browse our notebooks and other sources shared on [GitHub](https://github.com/SFOE-Hackathons/EnergyDataHackdays2024-BalanceEnergyPrices/).
 
-https://github.com/SFOE-Hackathons/EnergyDataHackdays2024-BalanceEnergyPrices/
-
 We started mocking up a basic dashboard using [Marimo](https://marimo.io), which could include the read-outs above as well as a [Timeline of April 22 events](https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=18jdhZQgIdU4FcwuW5Rif82PitmR3abKi2VNdCQOxnnY&font=Default&lang=en&initial_zoom=2&height=650) that we started collecting in a spreadsheet. The goal is better understanding of the subject matter through clear presentation of the data. Our [data sources](#data), as well as further [literature and links](#notes) can be found in the section below.
 
 ![Screenshot from 20240913 144310.png](https://bucketeer-036aa605-c047-4623-8610-f1764b90cf98.s3.amazonaws.com/openenergydata/1/VW9PO8PG6F9K7CSG4A799B9A/Screenshot_from_20240913_144310.png)
