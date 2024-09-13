@@ -1,4 +1,5 @@
 # EnergyDataHackdays2024-BalanceEnergyPrices
-<img src="utils/Folie2.JPG">
-<img src="utils/Folie3.JPG">
-<img src="utils/Folie4.JPG">
+
+<img src="challenge/Folie2.JPG">
+<img src="challenge/Folie3.JPG">
+<img src="challenge/Folie4.JPG">

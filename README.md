@@ -1,20 +1,44 @@
 # When do Balance Energy Prices Skyrocket?
 
-Presented at [Energy Data Hackdays 2024](https://hack.energy.opendata.ch/project/124)
-
-Fachhochschule Nordwestschweiz, September 12 - 13, 2024
-
+Presented at [Energy Data Hackdays 2024](https://hack.energy.opendata.ch/project/124).
+Fachhochschule Nordwestschweiz, September 12 - 13, 2024.
 _The original slides can be found in [CHALLENGE.md](CHALLENGE.md)_
 
 # Results
 
-Working in an open source data science environment, we created several [Jupyter Notebooks](https://jupyter.org) to dive into the challenge of understanding and modelling national energy balancing with Python. In our presentation you can see the key outputs, or browse our notebooks and other sources shared on [GitHub](https://github.com/SFOE-Hackathons/EnergyDataHackdays2024-BalanceEnergyPrices/).
+Working in an open source data science environment, we used [Jupyter Notebooks](https://jupyter.org) to dive into the challenge of understanding and modelling national energy balancing with Python. In our [presentation](https://raw.githubusercontent.com/SFOE-Hackathons/EnergyDataHackdays2024-BalanceEnergyPrices/main/presentation/When_do_Balance_Energy_Prices_Skyrocket_13_09_2024.pdf) you can see the key outputs, or browse our notebooks and other sources shared on [GitHub](https://github.com/SFOE-Hackathons/EnergyDataHackdays2024-BalanceEnergyPrices/).
 
-We started mocking up a basic dashboard using [Marimo](https://marimo.io), which could include the read-outs above as well as a [Timeline of April 22 events](https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=18jdhZQgIdU4FcwuW5Rif82PitmR3abKi2VNdCQOxnnY&font=Default&lang=en&initial_zoom=2&height=650) that we started collecting in a spreadsheet. The goal is better understanding of the subject matter through clear presentation of the data. Our [data sources](#data), as well as further [literature and links](#notes) can be found in the section below.
+The goal is better understanding of the subject matter through clear presentation of the data. Our **[data sources](#data)**, as well as further **[literature and links](#notes)** that were referenced can be found in a section further on.
 
-![Screenshot from 20240913 144310.png](https://bucketeer-036aa605-c047-4623-8610-f1764b90cf98.s3.amazonaws.com/openenergydata/1/VW9PO8PG6F9K7CSG4A799B9A/Screenshot_from_20240913_144310.png)
+We started mocking up a basic dashboard using [Marimo](https://marimo.io), which could include further read-outs and interactive graphs.
 
-_Prediction of load levels created with [Chronos forecasting](https://github.com/amazon-science/chronos-forecasting?tab=readme-ov-file), one of the tools we used._
+![](https://raw.githubusercontent.com/SFOE-Hackathons/EnergyDataHackdays2024-BalanceEnergyPrices/main/presentation/Marimo_iterating.png)
+
+Prediction of load levels was done with [Chronos forecasting](https://github.com/amazon-science/chronos-forecasting?tab=readme-ov-file) running in a [Runpod](https://runpod.io/?ref=yqg82xxd), as shown here: 
+
+![](https://raw.githubusercontent.com/SFOE-Hackathons/EnergyDataHackdays2024-BalanceEnergyPrices/main/presentation/Chronos.png)
+
+We also ran tests in the [SARIMAX](https://www.statsmodels.org/dev/examples/notebooks/generated/statespace_sarimax_stata.html#) and [Nixtla](https://github.com/Nixtla/statsforecast?tab=readme-ov-file) forecasting libraries.
+
+An initial Energy Overview was done by combining outputs from five energy sources with data available for this year:
+
+![](https://raw.githubusercontent.com/SFOE-Hackathons/EnergyDataHackdays2024-BalanceEnergyPrices/main/presentation/Energy_overview.jpg)
+
+**Comparison of Share and Price of Tertiary Energy**
+
+![](https://raw.githubusercontent.com/SFOE-Hackathons/EnergyDataHackdays2024-BalanceEnergyPrices/main/presentation/Tertiary_energy_share.jpg)
+
+**Comparison of Amount and Price of Tertiary Energy**
+
+![](https://raw.githubusercontent.com/SFOE-Hackathons/EnergyDataHackdays2024-BalanceEnergyPrices/main/presentation/Tertiary_energy.jpg)
+
+**Energy Overview**
+
+![](https://raw.githubusercontent.com/SFOE-Hackathons/EnergyDataHackdays2024-BalanceEnergyPrices/main/presentation/Combined.jpg)
+
+Finally, a [Timeline of April 22 events](https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=18jdhZQgIdU4FcwuW5Rif82PitmR3abKi2VNdCQOxnnY&font=Default&lang=en&initial_zoom=2&height=650) was started by collecting key developments in a spreadsheet. 
+
+We thank all the participants of the Hackdays, and hope that we provoke further data exploration in the future!
 
 # Data
 
@@ -45,8 +69,6 @@ Since it is not possible for the market participants to have all the information
 Swissgrid has to pay the current balancing price, and there is little to counter speculation and mispredictions. Few understand the background about the schedules and how Swissgrid organizes the grid operation. The [Swissgrid website](https://www.swissgrid.ch/de/home/customers/topics/bgm/balance-energy.html) has various documents that illustrate the matter.
 
 For a brief intro to statistical forecasting with Python, see [SARIMAX at Statsmodels.org](https://www.statsmodels.org/stable/examples/notebooks/generated/statespace_sarimax_faq.html)
-
-We used [Etherpad](https://pad.okfn.de/) (hosted at OKFN DE) to collect notes.
 
 ## In the Media
 
@@ -79,3 +101,4 @@ Inspired by Koboldgames, who supported [previous Energy Hackdays](https://kobold
 - [Green with Energy](https://store.steampowered.com/app/890890/Green_With_Energy/) (2024)
 - [How video games prepared me for energy modelling](https://www.linkedin.com/pulse/how-video-games-prepared-me-energy-modelling-10-avgerinopoulos/) (LinkedIn)
 
+We used [Etherpad](https://pad.okfn.de/) (hosted at OKFN DE) to collaborate on these notes.
