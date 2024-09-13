@@ -10,19 +10,9 @@ Working in an open source data science environment, we used [Jupyter Notebooks](
 
 The goal is better understanding of the subject matter through clear presentation of the data. Our **[data sources](#data)**, as well as further **[literature and links](#notes)** that were referenced can be found in a section further on.
 
-We started mocking up a basic dashboard using [Marimo](https://marimo.io), which could include further read-outs and interactive graphs.
-
-![](https://raw.githubusercontent.com/SFOE-Hackathons/EnergyDataHackdays2024-BalanceEnergyPrices/main/presentation/Marimo_iterating.png)
-
-Prediction of load levels was done with [Chronos forecasting](https://github.com/amazon-science/chronos-forecasting?tab=readme-ov-file) running in a [Runpod](https://runpod.io/?ref=yqg82xxd), as shown here: 
-
-![](https://raw.githubusercontent.com/SFOE-Hackathons/EnergyDataHackdays2024-BalanceEnergyPrices/main/presentation/Chronos.png)
-
-We also ran tests in the [SARIMAX](https://www.statsmodels.org/dev/examples/notebooks/generated/statespace_sarimax_stata.html#) and [Nixtla](https://github.com/Nixtla/statsforecast?tab=readme-ov-file) forecasting libraries.
-
 An initial Energy Overview was done by combining outputs from five energy sources with data available for this year:
 
-![](https://raw.githubusercontent.com/SFOE-Hackathons/EnergyDataHackdays2024-BalanceEnergyPrices/main/presentation/Energy_overview.jpg)
+![](https://raw.githubusercontent.com/SFOE-Hackathons/EnergyDataHackdays2024-BalanceEnergyPrices/main/presentation/Combined.png)
 
 **Comparison of Share and Price of Tertiary Energy**
 
@@ -34,7 +24,17 @@ An initial Energy Overview was done by combining outputs from five energy source
 
 **Energy Overview**
 
-![](https://raw.githubusercontent.com/SFOE-Hackathons/EnergyDataHackdays2024-BalanceEnergyPrices/main/presentation/Combined.jpg)
+![](https://raw.githubusercontent.com/SFOE-Hackathons/EnergyDataHackdays2024-BalanceEnergyPrices/main/presentation/Energy_overview.jpg)
+
+We started mocking up a basic dashboard using [Marimo](https://marimo.io), which could include further read-outs and interactive graphs.
+
+![](https://raw.githubusercontent.com/SFOE-Hackathons/EnergyDataHackdays2024-BalanceEnergyPrices/main/presentation/Marimo_iterating.png)
+
+Prediction of load levels was done with [Chronos forecasting](https://github.com/amazon-science/chronos-forecasting?tab=readme-ov-file) running in a [Runpod](https://runpod.io/?ref=yqg82xxd), as shown here: 
+
+![](https://raw.githubusercontent.com/SFOE-Hackathons/EnergyDataHackdays2024-BalanceEnergyPrices/main/presentation/Chronos.png)
+
+We also ran tests in the [SARIMAX](https://www.statsmodels.org/dev/examples/notebooks/generated/statespace_sarimax_stata.html#) and [Nixtla](https://github.com/Nixtla/statsforecast?tab=readme-ov-file) forecasting libraries.
 
 Finally, a [Timeline of April 22 events](https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=18jdhZQgIdU4FcwuW5Rif82PitmR3abKi2VNdCQOxnnY&font=Default&lang=en&initial_zoom=2&height=650) was started by collecting key developments in a spreadsheet. 
 
