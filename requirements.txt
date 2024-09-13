@@ -1,3 +1,4 @@
 pandas
 marimo
+plotly
 sktime[all_extras]
