@@ -1,4 +1,104 @@
-# EnergyDataHackdays2024-BalanceEnergyPrices
-<img src="utils/Folie2.JPG">
-<img src="utils/Folie3.JPG">
-<img src="utils/Folie4.JPG">
+# When do Balance Energy Prices Skyrocket?
+
+Presented at [Energy Data Hackdays 2024](https://hack.energy.opendata.ch/project/124).
+Fachhochschule Nordwestschweiz, September 12 - 13, 2024.
+_The original slides can be found in [CHALLENGE.md](CHALLENGE.md)_
+
+# Results
+
+Working in an open source data science environment, we used [Jupyter Notebooks](https://jupyter.org) to dive into the challenge of understanding and modelling national energy balancing with Python. In our [presentation](https://raw.githubusercontent.com/SFOE-Hackathons/EnergyDataHackdays2024-BalanceEnergyPrices/main/presentation/When_do_Balance_Energy_Prices_Skyrocket_13_09_2024.pdf) you can see the key outputs, or browse our notebooks and other sources shared on [GitHub](https://github.com/SFOE-Hackathons/EnergyDataHackdays2024-BalanceEnergyPrices/).
+
+The goal is better understanding of the subject matter through clear presentation of the data. Our **[data sources](#data)**, as well as further **[literature and links](#notes)** that were referenced can be found in a section further on.
+
+An initial Energy Overview was done by combining outputs from five energy sources with data available for this year:
+
+![](https://raw.githubusercontent.com/SFOE-Hackathons/EnergyDataHackdays2024-BalanceEnergyPrices/main/presentation/Combined.png)
+
+**Comparison of Share and Price of Tertiary Energy**
+
+![](https://raw.githubusercontent.com/SFOE-Hackathons/EnergyDataHackdays2024-BalanceEnergyPrices/main/presentation/Tertiary_energy_share.jpg)
+
+**Comparison of Amount and Price of Tertiary Energy**
+
+![](https://raw.githubusercontent.com/SFOE-Hackathons/EnergyDataHackdays2024-BalanceEnergyPrices/main/presentation/Tertiary_energy.jpg)
+
+**Energy Overview**
+
+![](https://raw.githubusercontent.com/SFOE-Hackathons/EnergyDataHackdays2024-BalanceEnergyPrices/main/presentation/Energy_overview.jpg)
+
+We started mocking up a basic dashboard using [Marimo](https://marimo.io), which could include further read-outs and interactive graphs.
+
+![](https://raw.githubusercontent.com/SFOE-Hackathons/EnergyDataHackdays2024-BalanceEnergyPrices/main/presentation/Marimo_iterating.png)
+
+Prediction of load levels was done with [Chronos forecasting](https://github.com/amazon-science/chronos-forecasting?tab=readme-ov-file) running in a [Runpod](https://runpod.io/?ref=yqg82xxd), as shown here: 
+
+![](https://raw.githubusercontent.com/SFOE-Hackathons/EnergyDataHackdays2024-BalanceEnergyPrices/main/presentation/Chronos.png)
+
+We also ran tests in the [SARIMAX](https://www.statsmodels.org/dev/examples/notebooks/generated/statespace_sarimax_stata.html#) and [Nixtla](https://github.com/Nixtla/statsforecast?tab=readme-ov-file) forecasting libraries.
+
+Finally, a [Timeline of April 22 events](https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=18jdhZQgIdU4FcwuW5Rif82PitmR3abKi2VNdCQOxnnY&font=Default&lang=en&initial_zoom=2&height=650) was started by collecting key developments in a spreadsheet. 
+
+We thank all the participants of the Hackdays, and hope that we provoke further data exploration in the future!
+
+# Data
+
+| Dataset | File | Source |
+| ------- | ---- | ------ |
+| Day-ahead prices, hourly | auction\_spot\_prices\_switzerland\_2024.csv | EPEX |
+| Day-ahead traded volumes, hourly | auction\_spot\_volumes\_switzerland\_2024.csv | EPEX |
+| Balancing prices for BGs short/long, 15min | balancing\_prices\_2024.csv | Swissgrid |
+| Day-ahead prices, hourly | day\_ahead\_prices\_CH\_2024.csv | ENTSO-E |
+| Swiss power generation per type, hourly | generation\_per\_type.csv | ENTSO-E |
+| Swiss power generation per type (staging), hourly | generation\_per\_type\_staging.csv | ENTSO-E |
+| Yearly calendar of events | kalender\_2024\_ch.csv | - |
+| Legend of Meteoschweiz columns | legende meteoschweiz.csv | Meteoschweiz |
+| Consumption schedule, hourly | load.csv | ENTSO-E |
+| Consumption Schedule (staging), hourly | load\_staging.csv | ENTSO-E |
+| Weather data | staging\_ms\_6120.csv | Meteoschweiz |
+| Weather data (unprocessed) | staging\_ms\_6121.csv | Meteoschweiz |
+| Problems reported in power supply | unavailability\_of\_generation\_units.csv | ENTSO-E |
+
+---
+
+Join our [Data Expedition](https://hack.energy.opendata.ch/project/15) to help efforts to catalog and support open data for projects like this one. Further links can be found in the [Resources](https://hack.energy.opendata.ch/event/2/stages) section of the Hackdays.
+
+# Notes
+
+Since it is not possible for the market participants to have all the information we have, we have to reconstruct the probable situation from the available sources - and if we recognize patterns, find out in which combination the variables become important. To learn about pricing models for power trading, see this [With The Grid blog post](https://withthegrid.com/energy-pricing-epex-day-ahead-and-imbalance-prices/).
+
+Swissgrid has to pay the current balancing price, and there is little to counter speculation and mispredictions. Few understand the background about the schedules and how Swissgrid organizes the grid operation. The [Swissgrid website](https://www.swissgrid.ch/de/home/customers/topics/bgm/balance-energy.html) has various documents that illustrate the matter.
+
+For a brief intro to statistical forecasting with Python, see [SARIMAX at Statsmodels.org](https://www.statsmodels.org/stable/examples/notebooks/generated/statespace_sarimax_faq.html)
+
+## In the Media
+
+These articles on the events in April were mentioned in the Challenge presentation:
+
+- [NZZ 30.04.2024](https://www.nzz.ch/wirtschaft/fehlprognose-beim-solarstrom-ploetzlich-fehlte-der-schweiz-die-produktion-eines-grossen-kernkraftwerkes-ld.1828058)
+- [NZZ 16.05.2024](https://www.nzz.ch/wirtschaft/wie-angespannt-ist-die-lage-am-strommarkt-ld.1697374)
+- [Bluewin 30.04.2024](https://www.bluewin.ch/de/news/schweiz/schweiz-drohte-letzte-woche-ploetzlich-ein-strom-blackout-2185652.html)
+- [Infosperber 13.05.2024](https://www.infosperber.ch/umwelt/energieproduktion/der-fast-blackout-den-es-nicht-gab/)
+
+## Projects
+
+We found these prior Hackday and other projects inspirational:
+
+- [Visistrom (2019)](https://hack.energy.opendata.ch/project/27)
+- [Electricity Maps (2020)](https://hack.energy.opendata.ch/project/67)
+- [Trends in tertiary energy prices (2021)](https://hack.energy.opendata.ch/project/86)
+- [Experimental Statistics ML_SoSi BFS (2023)](https://www.experimental.bfs.admin.ch/expstat/de/home/projekte/ml-sosi.html)
+- [Füllungsgrad der Speicherseen BFE (2024)](https://www.uvek-gis.admin.ch/BFE/storymaps/AP_FuellungsgradSpeicherseen/?lang=de)
+- [DataHub - Brent and WTI Spot Prices](https://datahub.io/@Daniellappv/oil-prices-this)
+- [UK Energy Dashboard](https://www.energydashboard.co.uk/live) ([Source](https://github.com/1tang/Energy-Dashboard), [Data](https://www.nationalgrideso.com/data-portal))
+- [Visualization of the European transmission network with Plotly and the PyPSA-Eur package](https://github.com/zoltanmaric/coppersushi)
+
+## Simulation as Game
+
+Inspired by Koboldgames, who supported [previous Energy Hackdays](https://koboldgames.ch/blog/2021-01-13?lang=eng) and have developed [serious games](https://koboldgames.ch/games) involving environmental and economics models, we researched whether games are being used to simulate and teach power systems.
+
+- [Barrios-O’Neill, Hook](https://www.sciencedirect.com/science/article/pii/S001632871630088X) (2016)
+- [Fate of the World](https://store.steampowered.com/app/901776/Fate_of_the_World_Tipping_Point/) (2011)
+- [Green with Energy](https://store.steampowered.com/app/890890/Green_With_Energy/) (2024)
+- [How video games prepared me for energy modelling](https://www.linkedin.com/pulse/how-video-games-prepared-me-energy-modelling-10-avgerinopoulos/) (LinkedIn)
+
+We used [Etherpad](https://pad.okfn.de/) (hosted at OKFN DE) to collaborate on these notes.

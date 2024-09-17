@@ -7,6 +7,9 @@ name = "pypi"
 pandas = "*"
 marimo = "*"
 sktime = {extras = ["all_extras"], version = "*"}
+livemark = "*"
+dash = "*"
+plotly = "*"
 
 [dev-packages]
 
